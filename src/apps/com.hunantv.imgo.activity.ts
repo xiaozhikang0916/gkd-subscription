@@ -54,5 +54,48 @@ export default defineGkdApp({
       rules: '[id="com.hunantv.imgo.activity:id/cancel"]',
       snapshotUrls: 'https://i.gkd.li/i/18717621',
     },
+    {
+      key: 6,
+      name: '广告弹窗',
+      desc: '自动点击"关闭"',
+      actionMaximum: 1,
+      activityIds: 'com.mgtv.ui.videoplay.MGVideoPlayActivity',
+      fastQuery: true,
+      rules: '[id="com.hunantv.imgo.activity:id/btnClose"]',
+      snapshotUrls: 'https://i.gkd.li/i/18963292',
+    },
+    {
+      key: 7,
+      name: '下载页广告半屏',
+      desc: '自动点击"关闭"',
+      activityIds: 'com.mgtv.ui.download.DownloadActivity',
+      fastQuery: true,
+      rules: [
+        {
+          key: 0,
+          name: '点击“广告”',
+          matches: '[id="com.hunantv.imgo.activity:id/layout_logo"]',
+          snapshotUrls: 'https://i.gkd.li/i/18963435',
+        },
+        {
+          preKeys: [0],
+          key: 1,
+          name: '点击“关闭”',
+          matches: '[id="com.hunantv.imgo.activity:id/close_ad"]',
+          snapshotUrls: 'https://i.gkd.li/i/18963462',
+        },
+      ],
+      snapshotUrls: 'https://i.gkd.li/i/18963292',
+    },
+    {
+      key: 8,
+      name: '播放页游戏弹窗',
+      desc: '自动点击"关闭"',
+      actionMaximum: 1,
+      activityIds: 'com.mgtv.ui.videoplay.MGVideoPlayActivity',
+      rules:
+        '@TextView <2 View <2 View < View < WebView < WebView <2 [vid="container"]',
+      snapshotUrls: 'https://i.gkd.li/i/18963292',
+    },
   ],
 });
