@@ -2,7 +2,7 @@ import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'com.zeekrlife.mobile',
-  name: '蛋卷基金',
+  name: '极氪',
   groups: [
     {
       key: 1,
@@ -13,6 +13,14 @@ export default defineGkdApp({
       fastQuery: true,
       rules: '[id="com.zeekrlife.mobile:id/im_dismiss"]',
       snapshotUrls: 'https://i.gkd.li/i/17202205',
+    },
+    {
+      key: 2,
+      name: '位置权限',
+      desc: '自动点击"取消"',
+      fastQuery: true,
+      actionMaximum: 2,
+      rules: '[id="com.zeekrlife.mobile:id/permission_alert_dialog_left_text"]',
     },
   ],
 });
