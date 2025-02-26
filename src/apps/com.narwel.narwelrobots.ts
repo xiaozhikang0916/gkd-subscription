@@ -6,13 +6,17 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      enable: false,
       name: '开屏广告',
       desc: '自动点击"跳过"',
       actionMaximum: 1,
       activityIds: '.MainActivity',
-      rules:
-        '(@View <2 View < View < View < View < FrameLayout < [id="android:id/content"])[desc*="跳过"]',
+      rules: [
+        {
+          activityIds: 'com.narwel.narwelrobots.MainActivity',
+          matches:
+            '@View <2 View < View < View < View < FrameLayout < [id="android:id/content"]',
+        },
+      ],
       snapshotUrls: 'https://i.gkd.li/i/18704697',
     },
   ],
