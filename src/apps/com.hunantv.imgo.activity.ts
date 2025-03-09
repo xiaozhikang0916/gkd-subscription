@@ -68,7 +68,10 @@ export default defineGkdApp({
       key: 7,
       name: '下载页广告半屏',
       desc: '自动点击"关闭"',
-      activityIds: 'com.mgtv.ui.download.DownloadActivity',
+      activityIds: [
+        'com.mgtv.ui.download.DownloadActivity',
+        'com.mgtv.ui.download.DownloadSubCollectionActivity',
+      ],
       fastQuery: true,
       rules: [
         {
@@ -95,6 +98,15 @@ export default defineGkdApp({
       activityIds: 'com.mgtv.ui.videoplay.MGVideoPlayActivity',
       rules:
         '@TextView <2 View <2 View < View < WebView < WebView <2 [vid="container"]',
+      snapshotUrls: 'https://i.gkd.li/i/18963292',
+    },
+    {
+      key: 9,
+      name: '首页广告卡片',
+      desc: '自动点击"关闭"',
+      actionMaximum: 1,
+      activityIds: '.MainActivity',
+      rules: '[id="com.hunantv.imgo.activity:id/layout_boot_skip"]',
       snapshotUrls: 'https://i.gkd.li/i/18963292',
     },
   ],

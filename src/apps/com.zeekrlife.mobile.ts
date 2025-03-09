@@ -22,5 +22,13 @@ export default defineGkdApp({
       actionMaximum: 2,
       rules: '[id="com.zeekrlife.mobile:id/permission_alert_dialog_left_text"]',
     },
+    {
+      key: 3,
+      name: '位置权限条',
+      desc: '自动点击"关闭"',
+      fastQuery: true,
+      activityIds: 'com.zeekrlife.community.discoverynew.DiscoveryMapActivity',
+      rules: '[id="com.zeekrlife.mobile:id/close"]',
+    },
   ],
 });
