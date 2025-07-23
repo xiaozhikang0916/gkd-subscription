@@ -2,7 +2,7 @@ import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'com.ecitic.bank.mobile',
-  name: '中信银行',
+  name: 'ecitic',
   groups: [
     {
       key: 1,
